@@ -37,29 +37,42 @@
 		.top-content {
 			background-color: mediumslateblue;
 		}
+
 		.content {
-			padding-top: 200px;
-			padding-bottom: 200px;
+			padding-top: 100px;
+			padding-bottom: 100px;
 			text-align: center;
 		}
+
 		.content-control {
 			padding: 5px;
 		}
-		.left-control {
-			width: 50%;
-			float:left;
-		}
-		.right-control {
-			float:right;
-			width: 50%;
-			text-align: right;
-		}
+
 		.sound {
 			background-color: whitesmoke;
 			padding: 10px;
 			border-radius: 10px;
-			border:none;
+			border: none;
 			color: black;
+		}
+
+		.selected-word {
+			background-color: whitesmoke;
+			padding: 10px 0px 10px 10px;
+			border: none;
+			margin-left: 10px;
+		}
+
+		audio {
+			transition: all 0.5s linear;
+			box-shadow: 2px 2px 4px 0px whitesmoke;
+			border-radius: 7px 7px 7px 7px;
+		}
+		.content-control-right {
+			float: right;
+		}
+		.vola {
+			padding-right: 144px;
 		}
 	</style>
 </head>
@@ -180,13 +193,33 @@
 			</div>
 		</div>
 		<div class="content-control">
-			<div class="left-control">
-				<button class="sound">SOUND</button>
-				<button class="sound">SEARCH</button>
-			</div>
-			<div class="right-control">
-				<button class="sound">SPEAK NOW</button>
-			</div>
+
+
+			<table class="audiotable">
+				<tbody>
+					<tr>
+						<td class="unicode audiolink"><input type="text" class="selected-word" id="prompt_text"
+								placeholder="Word to decode" readonly></td>
+						<td class="audiofile">
+							<audio controls="controls" src="En-uk-to_read.ogg.ogx">
+								Your device does not support the <code>audio</code> element.
+							</audio>
+						</td>
+						<td class="vola"></td>
+						<td>
+							<div class="content-control-right">
+							Try saying:
+							<button type="button" class="btn btn-primary btn-rec"> Record <i
+									class="material-icons">fiber_manual_record</i></button>
+							<canvas class="meter" height="35px" width="25px"></canvas>
+							<button type="button" data-word="because" class="btn btn-default btn-stop"> Stop <i
+									class="material-icons">stop</i></button>
+								</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
 		</div>
 	</div>
 	<!-- <div class="container">
