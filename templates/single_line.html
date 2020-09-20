@@ -5,6 +5,9 @@
 	<title></title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<style type="text/css">
 		.audiotable {
 			vertical-align: middle;
@@ -195,17 +198,20 @@
 		<div class="content-control">
 
 
-			<table class="audiotable">
+			<table class="audiotable d-flex just">
 				<tbody>
 					<tr>
 						<td class="unicode audiolink"><input type="text" class="selected-word" id="prompt_text"
-								placeholder="Word to decode" readonly></td>
+								placeholder="Word to decode" readonly>
+							</td>
+					</tr>
 						<td class="audiofile">
 							<audio controls="controls" src="En-uk-to_read.ogg.ogx">
 								Your device does not support the <code>audio</code> element.
 							</audio>
 						</td>
-						<td class="vola"></td>
+					</tr>
+					<tr>
 						<td>
 							<div class="content-control-right">
 							Try saying:
