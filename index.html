@@ -65,6 +65,15 @@
     
 
     <script type="text/javascript">
+
+      navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(function(stream) {
+        console.log('You let me use your mic!')
+      })
+      .catch(function(err) {
+        console.log('No mic for you!')
+      });
+
       // These will be initialized later
       var recognizer, recognizer1, recognizer2, recorder, callbackManager, audioContext, outputContainer;
       // Only when both recorder and recognizer do we have a ready application
