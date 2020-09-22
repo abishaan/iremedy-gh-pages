@@ -293,8 +293,7 @@ getScripts(dependencies, function() {
           canvasContext.clearRect(0,0,WIDTH,HEIGHT);
       
           // check if we're currently clipping
-          console.log(meter);
-          alert(meter);
+        
 
           if (meter.checkClipping())
               canvasContext.fillStyle = "red";
