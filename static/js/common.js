@@ -284,7 +284,7 @@ getScripts(dependencies, function() {
         mediaStreamSource.connect(meter);
     
         // kick off the visual updating
-        drawLoop();
+        //drawLoop();
     }
   
     function drawLoop( time ) {
@@ -334,7 +334,7 @@ getScripts(dependencies, function() {
           // grab our canvas
           console.log(targetEle);
           canvasContext = $(targetEle).parents('td').find('.meter')[0].getContext("2d");
-          drawLoop();
+         // drawLoop();
         }
         else {
           // raise tooltip
